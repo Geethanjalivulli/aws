@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: >-
+  An Amazon S3 trigger that retrieves metadata for the object that has been
+  updated.
+Resources:
+  geetha1lambda03092022:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.geetha1_function
+      Runtime: python3.7
+      CodeUri: .
+      Description: >-
+        An Amazon S3 trigger that retrieves metadata for the object that has
+        been updated.
+      MemorySize: 128
+      Timeout: 3
+      Role: 'arn:aws:iam::349499399425:role/service-role/geetha1-role-03-09-2022'
+      Tags:
+        'lambda-console:blueprint': s3-get-object-python
+
